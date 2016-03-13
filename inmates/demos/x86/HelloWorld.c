@@ -40,8 +40,9 @@ static void irq_handler(void)
 		min = delta;
 	if (delta > max)
 		max = delta;
-	printk("Timer fired, jitter: %6ld ns, min: %6ld ns, max: %6ld ns\n",
-	       delta, min, max);
+	//printk("Timer fired, jitter: %6ld ns, min: %6ld ns, max: %6ld ns\n",
+	//       delta, min, max);
+    printk("Hello World!\n");
 
 	expected_time += 100 * NS_PER_MSEC;
 	apic_timer_set(expected_time - tsc_read());
